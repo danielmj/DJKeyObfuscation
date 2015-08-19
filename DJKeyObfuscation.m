@@ -60,12 +60,12 @@
     self = [super init];
     if (self)
     {
-        [self work];
+        [self example];
     }
     return self;
 }
 
-- (void)work
+- (void)example
 {
     NSLog(@"Starting Hashing!");
     
