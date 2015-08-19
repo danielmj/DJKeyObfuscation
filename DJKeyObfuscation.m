@@ -25,15 +25,14 @@
     CC_SHA384(className.bytes, (CC_LONG)className.length, obfuscator);
     
     NSMutableString* hexString = [NSMutableString new];
-    unsigned char actualSecretKey[key.length];
     for (int i=0; i<key.length; i++) {
         
         if (i!=0) {
             [hexString appendString:@", "];
         }
         
-        actualSecretKey[i] = obfuscatedSecretKey[i] ^ obfuscator[i];
-        [hexString appendFormat:@"%02x", (unsigned int)actualSecretKey[i]];
+        unsigned char actualSecretChar = obfuscatedSecretKey[i] ^ obfuscator[i];
+        [hexString appendFormat:@"%02x", (unsigned int)actualSecretChar];
     }
     
     NSLog(@"{ %@ }", hexString);
