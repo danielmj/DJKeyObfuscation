@@ -13,7 +13,7 @@ Read the comments in the "work" function of DJKeyObfuscation.m to hopefully unde
 
 # Recommended
 
-It is recommended to also ass the following to your main.m function to disable debugging attacks
+It is recommended to also add the following to your main.m function to disable debugging attacks
 
 ```
 #import <dlfcn.h>
